@@ -2,7 +2,7 @@
 
 describe('Register scenarios', () => {
     beforeEach(() => {
-        cy.visit('https://alura-fotos.herokuapp.com/');
+        cy.visitSite();
         cy.contains('a[href="#/home/signup"]', 'Register now').click();
     });
 
