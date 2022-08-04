@@ -1,5 +1,5 @@
 Cypress.Commands.add('visitSite', () => {
-    cy.visit('https://alura-fotos.herokuapp.com/');
+    cy.visit('/');
 });
 
 Cypress.Commands.add('login', (userName, password) => {

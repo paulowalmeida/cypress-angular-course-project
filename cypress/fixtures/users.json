@@ -1,0 +1,20 @@
+[
+    {
+        "email": "luke.skywalker@gmail.com",
+        "fullName": "Luke Skywalker",
+        "userName": "luke",
+        "password": "skywalker"
+    },
+    {
+        "email": "anakin.skywalker@gmail.com",
+        "fullName": "Anakin Skywalker",
+        "userName": "Anakin",
+        "password": "skywalker"
+    },
+    {
+        "email": "padme.amidala@gmail.com",
+        "fullName": "Padmé Amidala",
+        "userName": "padme",
+        "password": "amidala"
+    }
+]

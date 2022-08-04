@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+const users = require('../../fixtures/users.json');
+
 describe('Register scenarios', () => {
     beforeEach(() => {
         cy.visitSite();
@@ -42,6 +44,16 @@ describe('Register scenarios', () => {
         it('length of password is bigger than 18 characters', () => {
             cy.get('input[formcontrolname="password"]').type('abcdefghijklmnopqrstuvwxyz').blur();
             cy.contains('ap-vmessage > small.text-danger', 'Maximun length is 18').should('be.visible');
+        });
+    });
+
+    users.forEach(user => {
+        it(`register a new user ${user.fullName}`, () => {
+            cy.get('input[formcontrolname="email"]').type(user.email);
+            cy.get('input[formcontrolname="fullName"]').type(user.fullName);
+            cy.get('input[formcontrolname="userName"]').type(user.userName);
+            cy.get('input[formcontrolname="password"]').type(user.password);
+            cy.contains('button', 'Register').click();
         });
     });
 });
